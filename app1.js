@@ -6,7 +6,19 @@ app.use(cors())
 
 
 app.get('/', (req, res) => {
-  res.send('mina')
+  res.send(
+    {
+    
+"name": "أحمد",
+  "age": 28,
+  "isStudent": false,
+  "skills": ["JavaScript", "Python", "JSON"],
+  "address": {
+    "city": "بيروت",
+    "country": "لبنان"
+  },
+    })
+
 })
 
 app.listen(port, () => {
