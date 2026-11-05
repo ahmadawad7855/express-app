@@ -6,20 +6,12 @@ app.use(cors())
 
 
 app.get('/', (req, res) => {
-  res.send(
-    {
-    
-"name": "أحمد",
-  "age": 28,
-  "isStudent": false,
-  "skills": ["JavaScript", "Python", "JSON"],
-  "address": {
-    "city": "بيروت",
-    "country": "لبنان"
-  },
-    })
-
-})
+    res.json([
+        { id: 1, name: 'أحمد', role: 'Developer' },
+        { id: 2, name: 'محمد', role: 'Designer' },
+        { id: 3, name: 'علي', role: 'Tester' }
+    ]);
+});
 
 app.listen(port, () => {
   console.log('Server is running on http://localhost:3000')
